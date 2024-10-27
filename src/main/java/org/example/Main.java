@@ -8,8 +8,11 @@ public class Main {
         System.out.println(testStudent.getDescription());
 
         ArrayList<Student> testStudents = new ArrayList<Student>();
-        testStudents.add(testStudent);
 
+        testStudents.add(testStudent);
         System.out.println(testStudents.toString());
+
+        StudentManager studentManager = new StudentManager(testStudents);
+        System.out.println(studentManager.toString());
     }
 }
