@@ -2,13 +2,24 @@ package org.example;
 
 import java.util.Objects;
 
-public class Student {
+public class Student extends Person {
     private int studentID;
     private double gpa;
 
-    public Student(int studentID, double gpa) {
+    public Student(String firstName, String lastName, int studentID, double gpa) {
+        super(firstName, lastName);
         this.studentID = studentID;
         this.gpa = gpa;
+    }
+    public String getDescription() {
+        String firstName = this.getFirstName();
+        String lastName = this.getLastName();
+        String str = String.format("Student: { \n" +
+                "First Name: " + studentID + ",\n" +
+                "Last Name: " + lastName + ",\n" +
+                "studentID: " + studentID + ",\n" +
+                "gpa: " + gpa + "\n}");
+        return str;
     }
 
     public int getStudentID() {
